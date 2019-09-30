@@ -23,7 +23,7 @@ public class ReadXML1 {
             NodeList nl = doc.getElementsByTagName("className");
             Node classNode = nl.item(0).getFirstChild();
             String cName = "factoryMethod." + ((Node) classNode).getNodeValue();
-            
+
             // 通过类名生成实例对象并将其返回
             Class<?> c = Class.forName(cName);
             Object obj = c.newInstance();

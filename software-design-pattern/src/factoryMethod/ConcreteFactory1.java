@@ -3,6 +3,7 @@ package factoryMethod;
 /**
  * @Author: 11101453
  * @Date: 2019/9/30
+ * @Description: 具体工厂1，生产产品1
  */
 public class ConcreteFactory1 implements AbstractFactory {
     public Product newProduct(){

@@ -1,17 +1,19 @@
 package chainOfResponsibility;
 
+/**
+ * @Author: 11101453
+ * @Date: 2019/9/30
+ */
 public class LeaveApprovalTest {
+    public static void main(String[] args) {
+        // ç»„è£…è´£ä»»é“¾
+        Leader t1 = new ClassAdviser();
+        Leader t2 = new DepartmentHead();
+        Leader t3 = new Dean();
 
-	public static void main(String[] args) {
-		// ×é×°ÔðÈÎÁ´
-		Leader t1 = new ClassAdviser();
-		Leader t2 = new DepartmentHead();
-		Leader t3 = new Dean();
-		
-		t1.setNext(t2);
-		t2.setNext(t3);
-	
-		t1.handleRequest(8);
-	}
+        t1.setNext(t2);
+        t2.setNext(t3);
 
+        t1.handleRequest(8);
+    }
 }

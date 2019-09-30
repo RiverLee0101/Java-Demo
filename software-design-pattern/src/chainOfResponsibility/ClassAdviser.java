@@ -1,15 +1,19 @@
 package chainOfResponsibility;
 
-public class ClassAdviser extends Leader{
-	public void handleRequest(int leaveDays){
-		if(leaveDays <= 2) {
-			System.out.print("°àÖ÷ÈÎÅú×¼Çë¼Ù"+leaveDays+"Ìì");
-		}else{
-			if(getNext() != null){
-				getNext().handleRequest(leaveDays);
-			}else{
-				System.out.print("Çë¼ÙÌìÊýÌ«¶à£¬Ã»ÓÐÈËÅú×¼¸ÃÇë¼Ù");
-			}
-		}
-	}
+/**
+ * @Author: 11101453
+ * @Date: 2019/9/30
+ */
+public class ClassAdviser extends Leader {
+    public void handleRequest(int leaveDays){
+        if(leaveDays <= 2) {
+            System.out.print("ç­ä¸»ä»»æ‰¹å‡†è¯·å‡"+leaveDays+"å¤©");
+        }else{
+            if(getNext() != null){
+                getNext().handleRequest(leaveDays);
+            }else{
+                System.out.print("è¯·å‡å¤©æ•°å¤ªå¤šï¼Œæ²¡æœ‰äººæ‰¹å‡†è¯¥è¯·å‡");
+            }
+        }
+    }
 }

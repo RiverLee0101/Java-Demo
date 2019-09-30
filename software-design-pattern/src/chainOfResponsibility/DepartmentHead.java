@@ -1,15 +1,19 @@
 package chainOfResponsibility;
 
-public class DepartmentHead extends Leader{
-	public void handleRequest(int leaveDays){
-		if(leaveDays <= 7){
-			System.out.println("ÏµÖ÷ÈÎÅú×¼ÄúÇë¼Ù" + leaveDays + "Ìì¡£"); 
-		}else{
-			if(getNext() != null){
-				getNext().handleRequest(leaveDays);
-			}else{
-				System.out.println("Çë¼ÙÌìÊýÌ«¶à£¬Ã»ÓÐÈËÅú×¼¸Ã¼ÙÌõ£¡");
-			}
-		}
-	}
+/**
+ * @Author: 11101453
+ * @Date: 2019/9/30
+ */
+public class DepartmentHead extends Leader {
+    public void handleRequest(int leaveDays){
+        if(leaveDays <= 7){
+            System.out.println("ç³»ä¸»ä»»æ‰¹å‡†æ‚¨è¯·å‡" + leaveDays + "å¤©ã€‚");
+        }else{
+            if(getNext() != null){
+                getNext().handleRequest(leaveDays);
+            }else{
+                System.out.println("è¯·å‡å¤©æ•°å¤ªå¤šï¼Œæ²¡æœ‰äººæ‰¹å‡†è¯¥å‡æ¡ï¼");
+            }
+        }
+    }
 }
